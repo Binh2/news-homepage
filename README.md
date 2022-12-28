@@ -88,7 +88,7 @@ To be honest, this project still needs a lot of revisions. I'm just going to out
 - I need to change some of the CSS -> JS (because it will become easier to develop and fix errors)
 - The page still has scrolling (I think I need to make the page smaller so there are no scrollbar)
 - When the hamburger menu is opened, if the browser is resized to a desktop width, the news homepage layout will start to break apart.
-- When a user uses `Ctrl` + `=` or `Ctrl` + `-` to resize the browser, the text will get smaller but the image tried to grow to take up available space (I want the image to shrink, not grow).
+- When a user uses `Ctrl` + `-` to scale down the browser, the text will get smaller but the image tried to grow to take up available space (I want the image to shrink, not grow).
 
 ### Useful resources
 
