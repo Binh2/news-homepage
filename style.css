@@ -1,0 +1,257 @@
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%);
+}
+.attribution address {
+	display: inline;
+}
+
+* {
+	font-family: Inter;
+}
+body {
+	margin: 15px 50px;
+}
+h1 {
+	color: hsl(240, 100%, 5%); /* Very dark blue */ 
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.3em;
+}
+p, nav a { 
+	color: hsl(236, 13%, 42%); /* Dark grayish blue */ 
+}
+p, button {
+	font-size: 0.8em;
+}
+a:not(.attribution a) {
+	text-decoration: none;
+}
+button {
+	background: hsl(5, 85%, 63%); /* Soft red */
+	color: hsl(36, 100%, 99%); /* Off-white */
+	border: 0px;
+	padding: 15px 35px;
+}
+button:hover {
+	background: hsl(240, 100%, 5%); /* Very dark blue */
+	cursor: pointer;
+}
+
+
+nav {
+	font-size: 1.2rem;
+}
+nav .nav-group {	
+	float: right; 
+	display: flex;
+	align-items: center;
+}
+nav .nav-group a { 
+	text-decoration: none; 
+	padding: 20px;
+	font-weight: 500;
+}
+nav .nav-group a:hover { 
+	color: hsl(5, 85%, 63%); /* Soft red */
+	cursor: pointer;
+}
+nav .nav-group a.last-nav {
+	padding-right: 0;
+}
+/* This part I could have use JS instead, but I stupidly decided to not use */
+nav .hamburger {
+	top: calc((40px - 17px)/2);
+}
+nav .hamburger, .hamburger-checkbox, .menu-close {
+	float: right;
+	display: none;
+	position: relative;
+	margin: 0;
+}
+nav .hamburger-checkbox {
+	right: -40px;
+	z-index: 2;
+	opacity: 0;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+nav .grayedout{
+	float: right;
+	display: none;
+}
+nav .menu-close {
+	right: -80px;
+	z-index: 1;
+	width: 40px;
+	height: auto;
+}
+nav .hamburger-checkbox:checked~.menu-close {
+	display: block;
+}
+nav .hamburger-checkbox:checked~.grayedout {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300vh;
+	opacity: 0.5;
+	background: black;
+}
+nav .hamburger-checkbox:checked~.nav-group {
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: white;
+	align-items: normal;
+	width: 70vw;
+	height: 300vh;
+	padding: 100px 0 0;
+}
+nav .hamburger-checkbox:checked~.nav-group a {
+	display: block;
+	color: hsl(240, 100%, 5%); /* Very dark blue */
+}
+nav .hamburger-checkbox:checked~.nav-group a:hover {
+	color: hsl(5, 85%, 63%); /* Soft red */
+}
+/* ----- The upper code can be replace by JS ----- */
+
+
+main>img { grid-area: thumpnail; }
+main>h1 { grid-area: header; }
+main>div { grid-area: content; }
+
+main {
+	font-size: 1.8rem;
+	display: grid;
+	grid-gap: 0 20px;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 50% auto;
+	grid-template-areas: 
+		'thumpnail thumpnail'
+		'header content';
+}
+main h1 {
+	margin: 10px 0;
+}
+main p {
+	margin: 20px 0;
+}
+main img {
+	width: 100%;
+	height: auto;
+}
+
+
+.news {
+	font-size: 1.4rem;
+	padding: 30px 20px;
+}
+.news {
+	background: hsl(240, 100%, 5%); /* Very dark blue */
+}
+.news a {
+	color: hsl(36, 100%, 99%); /* Off-white */
+}
+.news a:hover {
+	color: hsl(35, 77%, 62%); /* Soft orange */
+}
+.news h1 {
+	color: hsl(35, 77%, 62%); /* Soft orange */
+}
+.news h1, h2, p {
+	margin: 4px 0;
+}
+.news h2 {
+	margin-top: 20px;
+}
+
+
+section[class*="section-item"]>img { grid-area: thumpnail; }
+section[class*="section-item"]>div { grid-area: text; }
+	
+section[class*="section-item"] {
+	font-size: 1.2rem;
+	display: grid;
+	grid-gap: 0 20px;
+	/* grid-template-rows: minmax(30px, auto); */
+	/* grid-template-columns: auto 1fr; */
+	grid-template: auto / 40% auto;
+	grid-template-areas: 
+		'thumpnail text';
+}
+section[class*="section-item"] p {
+	margin: 4px 0 0;
+}
+section[class*="section-item"] img {
+	width: 100%;
+	height: auto;
+	/* object-fit: contain; */
+}
+section[class*="section-item"] header h1 {
+	margin: 5px 0 0;
+	font-size: 1.2em;
+}
+section[class*="section-item"] header h1:hover {
+	color: hsl(5, 85%, 63%); /* Soft red */
+	cursor: pointer;
+}
+.header-numbering {
+	font-size: 2.2em;
+	color: hsl(233, 8%, 79%); /* Grayish blue */
+}
+
+
+nav { grid-area: nav; }
+main { grid-area: main; }
+.news { grid-area: news; }
+.section-item1 { grid-area: item1; }
+.section-item2 { grid-area: item2; }
+.section-item3 { grid-area: item3; }
+footer { grid-area: footer; }
+
+.grid-container {
+	display: grid;
+	/* grid-template-rows: repeat(auto, 4); */
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-areas:
+		'nav nav nav'
+		'main main news'
+		'item1 item2 item3'
+		'footer footer footer';
+	grid-gap: 30px;
+	margin: 20px 40px;
+}
+
+
+@media (max-width: 700px) {
+	nav .nav-group a {
+		display: none;
+	}
+	nav .hamburger, .hamburger-checkbox {
+		display: block;
+	}
+	.grid-container {
+		grid-template: repeat(7, auto) / auto;
+		grid-template-areas:
+			'nav'
+			'main'
+			'news'
+			'item1'
+			'item2'
+			'item3'
+			'footer';
+		margin: 15px;
+	}
+	body {
+		margin: 0;
+	}
+}
