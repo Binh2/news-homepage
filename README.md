@@ -6,7 +6,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)1
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -16,8 +16,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 - [Author](#author)
 - [My recent works](#My-recent-works)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
